@@ -6,7 +6,7 @@
 /*   By: apuyane <apuyane@student.42angouleme.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/01 20:22:27 by apuyane           #+#    #+#             */
-/*   Updated: 2026/04/01 21:23:39 by apuyane          ###   ########.fr       */
+/*   Updated: 2026/05/07 14:47:18 by apuyane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,9 +57,4 @@ std::string	Contact::get_nickname()
 std::string	Contact::get_phone_number()
 {
 	return this->phone_number;
-}
-
-std::string	Contact::get_darkest_secret()
-{
-	return this->darkest_secret;
 }

@@ -6,12 +6,26 @@
 /*   By: apuyane <apuyane@student.42angouleme.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/01 20:10:52 by apuyane           #+#    #+#             */
-/*   Updated: 2026/04/01 21:37:42 by apuyane          ###   ########.fr       */
+/*   Updated: 2026/05/07 14:48:12 by apuyane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "phonebook.hpp"
 #include "contact.hpp"
+
+Phonebook::Phonebook()
+{
+	this->nb_contacts = 0;
+}
+
+bool	is_digit(std::string string)
+{
+	for (int j = 0;string[j];j++) {
+		if (!std::isdigit(string[j]))
+			return (false);
+	}
+	return (true);
+}
 
 int Phonebook::get_nb_contacts()
 {
@@ -72,9 +86,13 @@ std::string	formatColumn(std::string value)
 
 void	Phonebook::display_contacts()
 {
-
+	std::string str;
 	Contact *contact = this->contacts;
 	
+	if (this->get_nb_contacts() == 0) {
+		std::cout << "\033[31mYou can't search for contacts before adding any of them" << std::endl;
+		return ;
+	}
 	std::cout << std::setw(10) << std::right << "Index" << "|"
               << std::setw(10) << std::right << "First Name" << "|"
               << std::setw(10) << std::right << "Last Name" << "|"
@@ -87,4 +105,21 @@ void	Phonebook::display_contacts()
                   << std::setw(10) << std::right << formatColumn(contact[i].get_nickname()) << "|" << std::endl;
 		std::cout << "---------------------------------------------" << std::endl;
     }
+	std::cout << "\033[32mEnter Index : ";
+	std::getline(std::cin, str);
+	if (is_digit(str.c_str()) == false) {
+		std::cout << "\033[31mEnter an integer vaue" << std::endl;
+		return ;
+	}
+	int index = atoi(str.c_str());
+	if (index > this->get_nb_contacts() - 1 || index < 0)
+		std::cout << "\033[31mEnter a value in the range [0 - " << (this->get_nb_contacts() <= 8 ? this->get_nb_contacts() - 1 : 8) << "] : " << std::endl;
+	else
+	{
+		std::cout << "\033[32mIndex : " << index << std::endl;
+		std::cout << "\033[32mFirst Name : " << contact[index].get_first_name() << std::endl;
+		std::cout << "\033[32mLast Name : " << contact[index].get_last_name() << std::endl;
+		std::cout << "\033[32mNickname : " << contact[index].get_nickname() << std::endl;
+		std::cout << "\033[32mPhone number : " << contact[index].get_phone_number() << std::endl;
+	}
 }

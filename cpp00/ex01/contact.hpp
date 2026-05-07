@@ -6,7 +6,7 @@
 /*   By: apuyane <apuyane@student.42angouleme.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/01 20:09:15 by apuyane           #+#    #+#             */
-/*   Updated: 2026/04/01 21:22:48 by apuyane          ###   ########.fr       */
+/*   Updated: 2026/05/07 14:47:12 by apuyane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,6 @@ class Contact
 		std::string	get_last_name();
 		std::string	get_nickname();
 		std::string	get_phone_number();
-		std::string	get_darkest_secret();
 };
 
 #endif
