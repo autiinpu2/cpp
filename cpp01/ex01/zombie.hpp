@@ -6,7 +6,7 @@
 /*   By: apuyane <apuyane@student.42angouleme.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/02 16:20:58 by apuyane           #+#    #+#             */
-/*   Updated: 2026/04/02 18:58:22 by apuyane          ###   ########.fr       */
+/*   Updated: 2026/05/13 22:36:40 by apuyane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 class	Zombie
 {
 	private:
-		std::string name;
+		std::string _name;
 	public:
 		void	announce(void);
 		void	randomChump( std::string name );
