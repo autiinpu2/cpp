@@ -31,4 +31,9 @@ run:
 	make
 	./Fixed
 
+run2:
+	make
+	./Fixed
+	make fclean
+
 .PHONY: all clean fclean re
