@@ -31,7 +31,7 @@ int ClapTrap::getAd() const
 
 ClapTrap::ClapTrap(const ClapTrap& trap)
 {
-	std::cout << "Copy assignment operator called" << std::endl;
+	std::cout << "Copy constructor called" << std::endl;
 	this->Hp = trap.getHp();
 	this->Ep = trap.getEp();
 	this->Ad = trap.getAd();
