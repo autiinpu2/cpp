@@ -7,43 +7,15 @@ ClapTrap::ClapTrap(std::string name) {
 	this->Hp = 10;
 	this->Ep = 10;
 	this->Ad = 0;
-	std::cout << "Constructor called" << std::endl;
+	std::cout << "ClapTrap Constructor called" << std::endl;
 }
+
+ClapTrap::ClapTrap(std::string name, int hp, int ep, int ad) : _name(name), Hp(hp), Ep(ep), Ad(ad) {
+	std::cout << "ClapTrap Constructor called" << std::endl;
+};
 
 ClapTrap::~ClapTrap() {
-	std::cout << "Destructor called" << std::endl;
-}
-
-int ClapTrap::getHp() const
-{
-	return this->Hp;
-}
-
-int ClapTrap::getEp() const
-{
-	return this->Ep;
-}
-
-int ClapTrap::getAd() const
-{
-	return this->Ad;
-}
-
-ClapTrap::ClapTrap(const ClapTrap& trap)
-{
-	std::cout << "Copy constructor called" << std::endl;
-	this->Hp = trap.getHp();
-	this->Ep = trap.getEp();
-	this->Ad = trap.getAd();
-}
-
-ClapTrap& ClapTrap::operator=(const ClapTrap& trap)
-{
-	std::cout << "Copy assignment operator called" << std::endl;
-	Hp = trap.getHp();
-	Ep = trap.getEp();
-	Ad = trap.getAd();
-	return *this;
+	std::cout << "ClapTrap Destructor called" << std::endl;
 }
 
 void ClapTrap::attack(const std::string& target)
