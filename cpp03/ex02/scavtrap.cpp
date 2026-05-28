@@ -14,6 +14,14 @@ ScavTrap::~ScavTrap()
 
 void	ScavTrap::guardGate()
 {
+	if (this->Ep <= 0){
+		std::cout << "ScavTrap " << this->_name << " Does not have enough Ep" << std::endl;
+		return ;
+	}
+	if (this->Hp <= 0){
+		std::cout << "ScavTrap " << this->_name << " Is dead" << std::endl;
+		return ;
+	}
 	std::cout << "Gate keeper mode is now activated" << std::endl;
 }
 

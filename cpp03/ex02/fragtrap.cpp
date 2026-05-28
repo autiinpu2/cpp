@@ -14,6 +14,14 @@ FragTrap::~FragTrap()
 
 void FragTrap::highFivesGuys(void)
 {
+	if (this->Ep <= 0){
+		std::cout << "FragTrap " << this->_name << " Does not have enough Ep" << std::endl;
+		return ;
+	}
+	if (this->Hp <= 0){
+		std::cout << "FragTrap " << this->_name << " Is dead" << std::endl;
+		return ;
+	}
 	std::cout << "High-Five :)" << std::endl;
 }
 
