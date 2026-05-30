@@ -1,20 +1,32 @@
-#include "animal.hpp"
-#include "dog.hpp"
-#include "cat.hpp"
+#include "Animal.hpp"
+#include "Dog.hpp"
+#include "Cat.hpp"
+#include "WrongAnimal.hpp"
+#include "WrongCat.hpp"
 #include <iostream>
-#include <string>
 
 int	main(void)
 {
 	{
-		Dog rufus;
+		std::cout << "--Dog test--\n\n";
+		Animal *rufus = new Dog();
 
-		rufus.makeSound();
+		rufus->makeSound();
+		delete rufus;
 	}
 	{
-		Cat felix;
+		std::cout << "\n\n--Cat test--\n\n";
+		Animal *max = new Cat();
 		
-		felix.makeSound();
+		max->makeSound();
+		delete max;
+	}
+	{
+		std::cout << "\n\n--WrongCat test--\n\n";
+		WrongAnimal *felix = new WrongCat();
+
+		felix->makeSound();
+		delete felix;
 	}
 	return (0);
 }

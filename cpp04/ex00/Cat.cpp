@@ -1,4 +1,4 @@
-#include "cat.hpp"
+#include "Cat.hpp"
 #include <iostream>
 
 Cat::Cat()
@@ -12,6 +12,6 @@ Cat::~Cat()
 	std::cout << "Cat destructor" << std::endl;
 }
 
-void Cat::makeSound() {
+void Cat::makeSound() const {
 	std::cout << "**Meow Meow**" << std::endl;
 }

@@ -3,7 +3,7 @@ CFLAGS := -Wall -Wextra -Werror -std=c++98
 
 NAME := Polymorphism
 
-SRC := main.cpp animal.cpp dog.cpp cat.cpp
+SRC := main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp
 
 OBJ_DIR := obj
 OBJS := $(patsubst %.cpp,$(OBJ_DIR)/%.o,$(SRC))

@@ -1,4 +1,4 @@
-#include "animal.hpp"
+#include "Animal.hpp"
 #include <iostream>
 
 Animal::Animal()
@@ -30,7 +30,7 @@ std::string Animal::getType() const
 	return this->_type;
 }
 
-void Animal::makeSound()
+void Animal::makeSound() const
 {
 	std::cout << "*animal sound*" << std::endl;
 }
