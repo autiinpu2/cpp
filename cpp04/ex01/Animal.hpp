@@ -1,5 +1,4 @@
-#ifndef ANIMAL_H
-# define ANIMAL_H
+#pragma once
 
 # include <string>
 
@@ -14,7 +13,5 @@ class Animal
 		Animal& operator=(const Animal& animal);
 		std::string getType() const;
 		virtual void makeSound() const;
-		virtual void *get_pointer() const;
+		virtual void *get_pointer() const = 0;
 };
-
-#endif
