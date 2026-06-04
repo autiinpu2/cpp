@@ -1,6 +1,5 @@
 #pragma once
 
-# include <string>
 # include <iostream>
 
 class Brain
@@ -10,4 +9,6 @@ class Brain
 	public:
 		Brain();
 		~Brain();
+		Brain(const Brain& oldBrain);
+		Brain& operator=(const Brain& oldBrain);
 };

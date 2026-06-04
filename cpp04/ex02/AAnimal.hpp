@@ -3,15 +3,15 @@
 
 # include <string>
 
-class Animal
+class AAnimal
 {
 	protected:
 		std::string _type;
 	public:
-		Animal();
-		virtual ~Animal();
-		Animal(const Animal& animal);
-		Animal& operator=(const Animal& animal);
+		AAnimal();
+		virtual ~AAnimal();
+		AAnimal(const AAnimal& animal);
+		AAnimal& operator=(const AAnimal& animal);
 		std::string getType() const;
 		virtual void makeSound() const = 0;
 };

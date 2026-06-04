@@ -1,5 +1,4 @@
-#ifndef WRONGANIMAL_H
-# define WRONGANIMAL_H
+#pragma once
 
 # include <string>
 
@@ -15,5 +14,3 @@ class WrongAnimal
 		std::string getType() const;
 		void makeSound() const;
 };
-
-#endif

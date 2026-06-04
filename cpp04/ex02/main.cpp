@@ -11,7 +11,7 @@ int	main(void)
 		int n = 10;
 		int i = -1;
 		
-		Animal	*animals[n];
+		AAnimal	*animals[10];
 
 		std::cout << "Assignation\n" << std::endl;
 		while (++i < n) {

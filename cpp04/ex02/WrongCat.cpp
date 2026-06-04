@@ -1,5 +1,4 @@
 #include "WrongCat.hpp"
-#include <iostream>
 
 WrongCat::WrongCat()
 {
@@ -10,6 +9,20 @@ WrongCat::WrongCat()
 WrongCat::~WrongCat()
 {
 	std::cout << "WrongCat destructor" << std::endl;
+}
+
+WrongCat::WrongCat(const WrongCat& animal)
+{
+	this->_type = animal._type;
+	std::cout << "Cat copy constructor called" << std::endl;
+}
+
+WrongCat& WrongCat::operator=(const WrongCat& animal)
+{
+	if (this != &animal)
+		_type = animal._type;
+	std::cout << "Cat copy operator called" << std::endl;
+	return *this;
 }
 
 void WrongCat::makeSound() const {
