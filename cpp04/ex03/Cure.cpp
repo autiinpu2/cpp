@@ -5,11 +5,10 @@ Cure::Cure() : AMateria("cure") {
 
 Cure::~Cure()
 {
-	delete this;
 }
 
 void Cure::use(ICharacter& target) {
-	std::cout << "* shoots an Cure bolt at " << target.getName() << " *\n";
+	std::cout << "* heals " << target.getName() << "'s wounds *" << std::endl;
 }
 
 AMateria* Cure::clone() const

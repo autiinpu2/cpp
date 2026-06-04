@@ -7,7 +7,7 @@ class ICharacter;
 class AMateria
 {
 	protected:
-		std::string const & _type;
+		std::string _type;
 	public:
 		AMateria(std::string const & type);
 		virtual ~AMateria();

@@ -5,7 +5,6 @@ Ice::Ice() : AMateria("ice") {
 
 Ice::~Ice()
 {
-	delete this;
 }
 
 void Ice::use(ICharacter& target) {
