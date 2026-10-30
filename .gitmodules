@@ -13,3 +13,6 @@
 [submodule "cpp04"]
 	path = cpp04
 	url = git@github.com:autiinpu2/cpp04.git
+[submodule "cpp05"]
+	path = cpp05
+	url = git@github.com:autiinpu2/cpp05.git
